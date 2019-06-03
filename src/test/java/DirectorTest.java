@@ -25,9 +25,20 @@ public class DirectorTest {
     }
 
     @Test
-    public void canGetSalary(){
+    public void cannotSetBlankName() {
+        director.setName("");
+        assertEquals("Seth Rogen", director.getName());
+    }
+
+    @Test
+    public void canRaiseSalary(){
         director.raiseSalary(750.00);
         assertEquals(75750, director.getSalary());
+    }
+
+    @Test
+    public void canGetSalary(){
+        assertEquals(75000, director.getSalary());
     }
 
     @Test
@@ -60,7 +71,7 @@ public class DirectorTest {
 
     @Test
     public void canGetBonus(){
-        assertEquals(750, director.payBonus(), 0.01);
+        assertEquals(1500, director.payBonus(), 0.01);
     }
 
     @Test

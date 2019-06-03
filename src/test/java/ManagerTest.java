@@ -25,9 +25,20 @@ public class ManagerTest {
     }
 
     @Test
-    public void canGetSalary(){
+    public void canRaiseSalary(){
         manager.raiseSalary(200.00);
         assertEquals(25200, manager.getSalary());
+    }
+
+    @Test
+    public void cannotSubmitNegativeRaiseSalary() {
+        manager.raiseSalary(-300.00);
+        assertEquals(25000, manager.getSalary());
+    }
+
+    @Test
+    public void canGetSalary(){
+        assertEquals(25000, manager.getSalary());
     }
 
     @Test

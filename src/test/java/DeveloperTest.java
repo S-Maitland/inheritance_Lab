@@ -25,9 +25,26 @@ public class DeveloperTest {
     }
 
     @Test
-    public void canGetSalary() {
+    public void cannotSetBlankName() {
+        developer.setName("");
+        assertEquals("Scott", developer.getName());
+    }
+
+    @Test
+    public void canRaiseSalary() {
         developer.raiseSalary(300.00);
         assertEquals(30300, developer.getSalary());
+    }
+
+    @Test
+    public void cannotSubmitNegativeRaiseSalary() {
+        developer.raiseSalary(-300.00);
+        assertEquals(30000, developer.getSalary());
+    }
+
+    @Test
+    public void canGetSalary(){
+        assertEquals(30000, developer.getSalary());
     }
 
     @Test

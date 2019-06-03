@@ -25,9 +25,26 @@ public class DatabaseAdminTest {
     }
 
     @Test
-    public void canGetSalary() {
+    public void cannotSetBlankName() {
+        databaseAdmin.setName("");
+        assertEquals("Sven", databaseAdmin.getName());
+    }
+
+    @Test
+    public void canRaiseSalary() {
         databaseAdmin.raiseSalary(400.00);
         assertEquals(40400, databaseAdmin.getSalary());
+    }
+
+    @Test
+    public void cannotSubmitNegativeRaiseSalary() {
+        databaseAdmin.raiseSalary(-300.00);
+        assertEquals(40000, databaseAdmin.getSalary());
+    }
+
+    @Test
+    public void canGetSalary(){
+        assertEquals(40000, databaseAdmin.getSalary());
     }
 
     @Test
