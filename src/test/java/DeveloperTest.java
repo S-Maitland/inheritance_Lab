@@ -33,24 +33,24 @@ public class DeveloperTest {
     @Test
     public void canRaiseSalary() {
         developer.raiseSalary(300.00);
-        assertEquals(30300, developer.getSalary());
+        assertEquals(30300, developer.getSalary(), 0.01);
     }
 
     @Test
     public void cannotSubmitNegativeRaiseSalary() {
         developer.raiseSalary(-300.00);
-        assertEquals(30000, developer.getSalary());
+        assertEquals(30000, developer.getSalary(), 0.01);
     }
 
     @Test
     public void canGetSalary(){
-        assertEquals(30000, developer.getSalary());
+        assertEquals(30000, developer.getSalary(), 0.01);
     }
 
     @Test
     public void canSetSalary() {
         developer.setSalary(30000);
-        assertEquals(30000, developer.getSalary());
+        assertEquals(30000, developer.getSalary(), 0.01);
     }
 
     @Test

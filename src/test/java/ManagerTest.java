@@ -27,24 +27,24 @@ public class ManagerTest {
     @Test
     public void canRaiseSalary(){
         manager.raiseSalary(200.00);
-        assertEquals(25200, manager.getSalary());
+        assertEquals(25200, manager.getSalary(), 0.01);
     }
 
     @Test
     public void cannotSubmitNegativeRaiseSalary() {
         manager.raiseSalary(-300.00);
-        assertEquals(25000, manager.getSalary());
+        assertEquals(25000, manager.getSalary(), 0.01);
     }
 
     @Test
     public void canGetSalary(){
-        assertEquals(25000, manager.getSalary());
+        assertEquals(25000, manager.getSalary(), 0.01);
     }
 
     @Test
     public void canSetSalary(){
         manager.setSalary(30000);
-        assertEquals(30000, manager.getSalary());
+        assertEquals(30000, manager.getSalary(), 0.01);
     }
 
     @Test
