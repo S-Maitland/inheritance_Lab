@@ -25,8 +25,8 @@ public class DatabaseAdminTest {
     }
 
     @Test
-    public void cannotSetBlankName() {
-        databaseAdmin.setName("");
+    public void cannotSetNullName() {
+        databaseAdmin.setName(null);
         assertEquals("Sven", databaseAdmin.getName());
     }
 

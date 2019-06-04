@@ -25,8 +25,8 @@ public class DeveloperTest {
     }
 
     @Test
-    public void cannotSetBlankName() {
-        developer.setName("");
+    public void cannotSetNullName() {
+        developer.setName(null);
         assertEquals("Scott", developer.getName());
     }
 

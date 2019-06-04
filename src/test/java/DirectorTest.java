@@ -25,8 +25,8 @@ public class DirectorTest {
     }
 
     @Test
-    public void cannotSetBlankName() {
-        director.setName("");
+    public void cannotSetNullName() {
+        director.setName(null);
         assertEquals("Seth Rogen", director.getName());
     }
 
